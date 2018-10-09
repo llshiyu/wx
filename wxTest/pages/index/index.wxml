@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='quit' bindtap='quit'>{{username?'退出':'去登录'}}</view>
+  <view class="userinfo" wx:if='{{username}}'>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取微信头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <view wx:if='{{username}}'>Hello {{username}}</view>
+    <view wx:else>请登录</view>
+  </view>
+  <view class='book-table' wx:if='{{username}}'>
+    <view class='book-tr clearfix'>
+      <view class='book-th fl'>图书名</view>
+      <view class='book-th fl'>图书价格</view>
+      <view class='book-th fl'>图书信息</view>
+      <view class='book-th fl'>图书类型</view>
+    </view>
+    <view class='book-tr clearfix' wx:for='{{bookList}}'>
+      <view class='book-td fl limitOne'>{{item.bookName}}</view>
+      <view class='book-td fl limitOne'>{{item.bookPrice}}</view>
+      <view class='book-td fl limitOne'>{{item.bookInfo}}</view>
+      <view class='book-td fl limitOne'>{{item.typeName}}</view>
+    </view>
+  </view>
+
+</view>

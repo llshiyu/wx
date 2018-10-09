@@ -1,0 +1,3 @@
+<view>
+  <web-view src="http://t100static.zhengtoon.com/bjtoon-information/app/index.html?appCode=sy"></web-view>
+</view>

@@ -1,0 +1,49 @@
+<view class="container">
+  <navigator url="../h5/h5" hover-class="navigator-hover" class='jump-h5'>跳转到H5</navigator>    
+  <view class='title'>登录</view>
+  <view class="input-box clearfix">
+    <text class="cont-label">用户名: </text>
+    <input class="cont-input" bindinput="bindUsername" placeholder='请输入用户名' auto-focus value='{{username}}'></input>
+  </view>
+  <view class="input-box clearfix">
+    <text class="cont-label">密码: </text>
+    <input class="cont-input" bindinput='bindPassword' type="password" placeholder='请输入密码' value='{{password}}'></input>
+  </view>
+  <view class="input-box clearfix">
+    <button size='mini' type='primary' class='login-btn fl' bindtap='goLogin'>登录</button>
+    <button size='mini' type='default' class='register-btn fl' bindtap='showRegister'>注册</button>
+    <view class='forget-password fl' bindtap='showForget'>忘记密码</view>
+  </view>
+</view>
+<!-- 注册框 -->
+<view class='register-box' wx:if='{{isShowRegister}}'>
+  <view class='title'>注册</view>
+  <view class="input-box clearfix">
+    <text class="cont-label">用户名: </text>
+    <input class="cont-input" bindinput="bindUsername" placeholder='请输入用户名' auto-focus></input>
+  </view>
+  <view class="input-box clearfix">
+    <text class="cont-label">密码: </text>
+    <input class="cont-input" bindinput='bindPassword' type="password" placeholder='请输入密码'></input>
+  </view>
+  <view class="input-box">
+    <button size='mini' type='primary' class='login-btn' bindtap='goRegister'>提交</button>
+    <button size='mini' type='default' class='register-btn' bindtap='hideRegister'>取消</button>
+  </view>
+</view>
+<!-- 修改密码框 -->
+<view class='register-box' wx:if='{{isShowForget}}'>
+  <view class='title'>修改密码</view>
+  <view class="input-box clearfix">
+    <text class="cont-label">用户名: </text>
+    <input class="cont-input" bindinput="bindUsername" placeholder='请输入用户名' auto-focus value='{{username}}'></input>
+  </view>
+  <view class="input-box clearfix">
+    <text class="cont-label">密码: </text>
+    <input class="cont-input" bindinput='bindPassword' type="password" placeholder='请输入密码'></input>
+  </view>
+  <view class="input-box">
+    <button size='mini' type='primary' class='login-btn' bindtap='goForget'>确定</button>
+    <button size='mini' type='default' class='register-btn' bindtap='hideForget'>取消</button>
+  </view>
+</view>

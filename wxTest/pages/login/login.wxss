@@ -1,0 +1,69 @@
+.container {
+}
+
+.jump-h5 {
+  position: absolute;
+  top: 80rpx;
+  right: 80rpx;
+  text-decoration: underline;
+}
+
+.title {
+  margin: 30rpx 0;
+  font-size: 50rpx;
+  color: #f00;
+}
+
+.input-box {
+  margin-bottom: 30rpx;
+}
+
+.cont-label, .cont-input {
+  float: left;
+}
+
+.cont-label {
+  margin-right: 20rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 180rpx;
+  text-align: right;
+}
+
+.cont-input {
+  border: 1rpx solid #ccc;
+  border-radius: 5rpx;
+  padding: 5rpx 20rpx;
+  height: 60rpx;
+}
+
+.login-btn {
+  margin-right: 30rpx;
+}
+
+.forget-password {
+  margin-left: 30rpx;
+  display: inline-block;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 26rpx;
+  text-decoration: underline;
+}
+
+/* 注册框 */
+
+.register-box {
+  position: absolute;
+  top: 340rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(-50%);
+  background: #fff;
+  text-align: center;
+  z-index: 99;
+}
+
+.register-box .cont-input {
+  text-align: left;
+}
